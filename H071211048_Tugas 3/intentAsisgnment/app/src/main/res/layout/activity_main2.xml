@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:id="@+id/newpost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:layout_marginHorizontal="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Post"
+            android:layout_marginBottom="8dp"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/newpost"
+        android:background="#5E6761">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/post"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/baseline_image_24"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Write a caption..."
+                android:paddingLeft="10dp"
+                android:background="@null"
+                android:gravity="left"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postLayout"
+        android:text="upload"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:onClick="upload"/>
+
+</RelativeLayout>
